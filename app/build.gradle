@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        applicationId "com.example.lutfood_ht"
+        minSdkVersion 28
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+configurations { compile.exclude group: "junit", module: "junit"}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.jsoup:jsoup:1.10.3'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-firestore:21.4.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'org.testng:testng:6.9.6'
+}
+
+apply plugin: 'com.google.gms.google-services'

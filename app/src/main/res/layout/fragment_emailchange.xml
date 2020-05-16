@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/lutfood_background">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_round"
+        android:hint="Kirjoita uusi sähköpostiosoite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:paddingStart="10dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:id="@+id/new_email1"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_round"
+        android:hint="Toista sähköpostiosoite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="215dp"
+        android:paddingStart="10dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="10dp"
+        android:id="@+id/new_email2"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Lähetä"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:id="@+id/new_email_send"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:id="@+id/changeEmailCurrentUser"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/lutfood_background">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Email"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_user"
+        android:background="@drawable/edit_round"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="125dp"
+        android:id="@+id/login_email"/>
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_password"
+        android:background="@drawable/edit_round"
+        android:drawablePadding="10dp"
+        android:id="@+id/login_password"
+        android:hint="Password"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="Sign in"
+        android:id="@+id/login_signIn"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Forgot password?"
+        android:id="@+id/forgot"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or use one of the methods underneath"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:id="@+id/alternative"/>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_marginTop="500dp"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="525dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

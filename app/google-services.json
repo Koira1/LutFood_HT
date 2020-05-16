@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "931566743482",
+    "firebase_url": "https://lutfood-fbcda.firebaseio.com",
+    "project_id": "lutfood-fbcda",
+    "storage_bucket": "lutfood-fbcda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931566743482:android:1d559b515986e785e57783",
+        "android_client_info": {
+          "package_name": "com.example.lutfood_ht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931566743482-0dbg10knaqh7n84sg2drg7ctj23t7vkn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lutfood_ht",
+            "certificate_hash": "9414e1968a3c6f8e57ccef03c59e8ffd0f485bbd"
+          }
+        },
+        {
+          "client_id": "931566743482-0dbg10knaqh7n84sg2drg7ctj23t7vkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD6pCK85pwW-ZJjnmli3RDm7egwRjY_iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931566743482-0dbg10knaqh7n84sg2drg7ctj23t7vkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

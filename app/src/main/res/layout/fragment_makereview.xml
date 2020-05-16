@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/lutfood_background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginTop="150dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arvosana"
+                android:textSize="30sp"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:background="@drawable/edit_round"
+                android:layout_marginTop="200dp"
+                android:hint="Vapaa sana..."
+                android:paddingLeft="10dp"
+                android:paddingBottom="80dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/freeWord"/>
+
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit_review"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="450dp"
+                android:text="Lähetä"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anonyymi arvostelu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="400dp"
+                android:id="@+id/make_review_anonymous"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jätä arvostelu"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"/>
+
+
+    <Spinner android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:id="@+id/ravintola"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+    <Spinner
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:id="@+id/ruoka"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/lutfood_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rekisteröi uusi käyttäjä"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:drawableLeft="@drawable/ic_user"
+        android:background="@drawable/edit_round"
+        android:hint="Username"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:id="@+id/register_username"/>
+
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="225dp"
+        android:drawableLeft="@drawable/ic_password"
+        android:background="@drawable/edit_round"
+        android:hint="Password"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:drawablePadding="10dp"
+        android:id="@+id/register_password"/>
+
+
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:drawableLeft="@drawable/ic_password"
+        android:background="@drawable/edit_round"
+        android:hint="Re-enter password"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:drawablePadding="10dp"
+        android:id="@+id/register_password1"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:background="@drawable/edit_round"
+        android:hint="Email"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:drawablePadding="10dp"
+        android:id="@+id/register_email"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:background="@drawable/edit_round"
+        android:hint="Re-enter email"
+        android:paddingLeft="10dp"
+        android:textSize="25dp"
+        android:drawablePadding="10dp"
+        android:id="@+id/register_email1"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Luo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="475dp"
+        android:id="@+id/register_button"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tai käytä vaihtoehtoisia menetelmiä"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="535dp"
+        android:textSize="20sp"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="575dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</RelativeLayout>
