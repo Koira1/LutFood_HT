@@ -71,7 +71,6 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemSelected
     ArrayAdapter<String> categoryArrayAdapter;
     ArrayList<String> restaurants_list;
     TableLayout tl;
-    String path;
     ArrayList<Restaurant> restaurants;
     ArrayList<MenuItem> menu;
     Reviews reviews;
@@ -197,7 +196,6 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemSelected
         /*
         Get restaurants from memory
          */
-        Log.d("STARTING", "GET OBJECTS FROM MEMORY");
         TinyDB tinyDB = new TinyDB(this.getContext());
         ArrayList<Object> restaurantObjects = tinyDB.getListObject("restaurants", Restaurant.class);
         for(Object o : restaurantObjects){
@@ -205,10 +203,13 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemSelected
         }
     }
 
-
+    /*
+    When new restaurant/category is selected remove all current textviews
+     */
     void removeTextViews(){
         tl.removeAllViews();
     }
+
     /*
     Retrieve rating for food item from the database, return the average
      */

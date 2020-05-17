@@ -22,6 +22,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+/*
+Fragment where email can be changed
+ */
 
 public class emailChangeFragment extends Fragment implements View.OnClickListener {
 
@@ -49,6 +52,9 @@ public class emailChangeFragment extends Fragment implements View.OnClickListene
         return v;
     }
 
+    /*
+    Check if email is actually email
+     */
     boolean checkEmail(){
 
         if(email1.getText().toString().equals(email2.getText().toString())){
@@ -63,6 +69,9 @@ public class emailChangeFragment extends Fragment implements View.OnClickListene
         }
 
     }
+    /*
+    Tell database to update email
+     */
 
     void updateEmail(){
         String newEmail = email1.getText().toString();

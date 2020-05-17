@@ -33,6 +33,12 @@ public class Restaurant implements Parcelable {
 
 
 
+
+
+            /*
+            THIS CODE IS PROBABLY DEPRECATED
+             */
+
     protected Restaurant(Parcel in) {
         name = in.readString();
         if (in.readByte() == 0x01) {

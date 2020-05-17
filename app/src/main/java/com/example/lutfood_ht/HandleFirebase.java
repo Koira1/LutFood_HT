@@ -104,7 +104,9 @@ public class HandleFirebase {
         return restaurant;
     }
 
-
+    /*
+    First get all restaurants names from separate collection inside firebase
+     */
     public void getRestaurantsNames(final FirestoreCallback firestoreCallback) {
         final HandleFirebase handleFirebase_readData = new HandleFirebase();
         dataRef = db.collection("RestaurantNames");
@@ -133,7 +135,9 @@ public class HandleFirebase {
                 });
     }
 
-
+    /*
+    This part is relatively complicated, there are two nested async operations. This function iterates when readData is complete.
+     */
 
     public void readDataHandler(final ArrayList<String> restaurantNames, final FirestoreCallback firestoreCallback1){
         if(i < restaurantNames.size()){
@@ -156,6 +160,10 @@ public class HandleFirebase {
 
         }
     }
+
+    /*
+    Get the review elements
+     */
 
     public Review parseReview(Map<String, Object> data){
         String feedback = "";
@@ -203,11 +211,9 @@ public class HandleFirebase {
     }
 
     /*
-    Collect data from the database
+    Collect data from the database, onfinish tell readDataHandler that this function is finished
      */
     public void readData(final FirestoreCallback firestoreCallback, final String collection){
-        Log.d("!!!", "Reading new collection");
-
         dataRef = db.collection(collection);
         dataRef.get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -234,7 +240,9 @@ public class HandleFirebase {
                     }
                 });
     }
-
+    /*
+    Interface for getting reviews
+     */
     public interface FireStoreCallback_reviews {
         void onCallback(ArrayList<Review> reviews);
     }

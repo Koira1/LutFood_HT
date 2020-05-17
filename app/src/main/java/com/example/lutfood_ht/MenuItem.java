@@ -5,6 +5,10 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+/*
+This class is one menu item within restaurant's menu
+ */
+
 public class MenuItem implements Parcelable {
     String category;
     String food;
@@ -21,6 +25,13 @@ public class MenuItem implements Parcelable {
         this.restaurantName = restaurantName;
         this.version = version;
     }
+
+
+    /*
+    All the code beneath is just to make this custom class parcelable between fragments
+     */
+
+
 
     protected MenuItem(Parcel in) {
         category = in.readString();

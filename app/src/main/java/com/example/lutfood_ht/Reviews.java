@@ -6,6 +6,10 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Class that contains all of the reviews
+ */
+
 public class Reviews implements Parcelable {
     ArrayList<Review> reviews;
 

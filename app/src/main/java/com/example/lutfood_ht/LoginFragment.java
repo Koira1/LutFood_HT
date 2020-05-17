@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -34,6 +35,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/*
+Login fragment from settings page
+ */
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
@@ -98,8 +106,27 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    /*
+    Check if provided email and password are correct
+     */
     boolean checkFields(){
         boolean valid = true;
+        Boolean emailOk = Patterns.EMAIL_ADDRESS.matcher(login_email.getText().toString()).matches();
+        Pattern pattern;
+        Matcher matcher;
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(login_password.getText().toString());
+
+        if(!emailOk){
+            Toast.makeText(getContext(), "Sähköposti ei ole oikeaa muotoa", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        if(!matcher.matches()){
+            Toast.makeText(getContext(), "Salasana liian heikko, salasanan tulee olla 9 merkkiä pitkä, salasanan tulee käyttää yhtä isoa kirjainta, yhtä numeroa ja yhtä erikoismerkkiä [@#$%^&+=!]", Toast.LENGTH_LONG).show();
+            return false;
+        }
 
         return valid;
     }

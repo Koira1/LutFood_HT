@@ -143,6 +143,9 @@ public class EmailPasswordActivity extends Fragment implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    /*
+                    Login successful
+                     */
                     Bundle bundle = new Bundle();
                     bundle.putParcelable("reviews", reviews);
                     FirebaseUser user = mAuth.getCurrentUser();
@@ -152,13 +155,23 @@ public class EmailPasswordActivity extends Fragment implements View.OnClickListe
                     getFragmentManager().beginTransaction().replace(R.id.fragment_container, menuFragment).commit();
                     //updateUI(user);
                 } else {
-                    Log.d("fail", "Failed...");
+                    /*
+                    Login failed for some reason
+                     */
+                    LoginFragment loginFragment = new LoginFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelable("reviews", reviews);
+                    errorToast(task.getException().toString());
+                    loginFragment.setArguments(bundle);
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, loginFragment).commit();
                 }
 
             }
         });
     }
-
+    void errorToast(String error){
+        Toast.makeText(getContext(), "Virhe: " + error, Toast.LENGTH_LONG).show();
+    }
     @Override
     public void onClick(View v) {
 

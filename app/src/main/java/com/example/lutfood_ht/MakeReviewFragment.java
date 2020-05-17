@@ -35,7 +35,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/*
+Fragment where reviews can be made
+ */
 public class MakeReviewFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     FirebaseUser user;
@@ -51,7 +53,6 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
     ArrayAdapter<String> restaurant_adapter;
     ArrayAdapter<String> food_adapter;
     Reviews reviews;
-    Restaurant rakuuna;
     Review review;
     CheckBox anonymous;
 
@@ -98,7 +99,9 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
         }
 
     }
-
+    /*
+    From TinyDB retrieve the restaurants
+     */
     private void retrieveRestaurants(){
         TinyDB tinyDB = new TinyDB(this.getContext());
         ArrayList<Object> objects = tinyDB.getListObject("restaurants", Restaurant.class);
@@ -126,9 +129,11 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
         getMenuItemsForRestaurant(restaurantName);
     }
 
+    /*
+    Find the selected restaurant and retrieve the menu items for that restaurant
+     */
     void getMenuItemsForRestaurant(String restaurantName){
         foods = new ArrayList<>();
-        Log.d("getmenuitems", "true");
         int index = 0;
         while (index < restaurants.size()){
             if(restaurants.get(index).name.equals(restaurantName)){
@@ -149,6 +154,9 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
         food_makereview.setAdapter(food_adapter);
     }
 
+    /*
+    Check that fields are correct
+     */
     boolean checkFields(){
         if(restaurant_makereview.getSelectedItem().toString().equals("Ravintola")){
             Toast.makeText(this.getContext(), "Ole hyvä ja valitse ravintola", Toast.LENGTH_LONG).show();
@@ -174,6 +182,10 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
         String reviewer = user.getDisplayName();
         return reviewer;
     }
+
+    /*
+    New review may take up to 60 seconds to show up in the app
+     */
 
     public void submitReview(){
 
@@ -227,7 +239,9 @@ public class MakeReviewFragment extends Fragment implements View.OnClickListener
 
 
     }
-
+    /*
+    After writing review was success start MenuFragment
+     */
     void startMenuFragment(){
         Toast.makeText(getContext(), "Review submitted succesfully!", Toast.LENGTH_SHORT).show();
         Bundle bundle = new Bundle();

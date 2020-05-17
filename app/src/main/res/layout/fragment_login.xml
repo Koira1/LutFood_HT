@@ -51,7 +51,7 @@
         android:text="Or use one of the methods underneath"
         android:textSize="20sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="350dp"
         android:id="@+id/alternative"/>
 
     <View
@@ -59,13 +59,13 @@
         android:layout_height="2dp"
         android:layout_centerHorizontal="true"
         android:background="@android:color/holo_orange_dark"
-        android:layout_marginTop="500dp"/>
+        android:layout_marginTop="400dp"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="525dp"
+        android:layout_marginTop="425dp"
         android:layout_centerHorizontal="true"
         />
 

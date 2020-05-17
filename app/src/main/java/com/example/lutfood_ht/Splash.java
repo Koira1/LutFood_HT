@@ -98,7 +98,9 @@ public class Splash extends Activity {
 
 
 
-
+    /*
+    Create TinyDB
+     */
     void makePreferences(ArrayList<Restaurant> restaurants){
         TinyDB tinyDB = new TinyDB(this);
         ArrayList<Object> restaurantObjects = new ArrayList<>();

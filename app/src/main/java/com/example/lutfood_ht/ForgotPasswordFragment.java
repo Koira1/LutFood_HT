@@ -20,6 +20,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.zip.Inflater;
 
+/*
+Send email to reset password
+ */
+
 public class ForgotPasswordFragment extends Fragment implements View.OnClickListener {
 
     Button sendEmail;
@@ -40,6 +44,10 @@ public class ForgotPasswordFragment extends Fragment implements View.OnClickList
         return v;
     }
 
+    /*
+    Get the email from edittext
+     */
+
     String getEmailString(){
         String email = getEmail.getText().toString();
         if(checkEmailAddress(email)){
@@ -50,7 +58,9 @@ public class ForgotPasswordFragment extends Fragment implements View.OnClickList
         }
 
     }
-
+    /*
+    Check if legit email
+     */
     boolean checkEmailAddress(String email){
         if(email.length() == 0){
             return false;

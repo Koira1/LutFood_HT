@@ -22,6 +22,10 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+User wants to change their password
+ */
+
 public class passwordChangeFragment extends Fragment implements View.OnClickListener {
 
     EditText password1;
@@ -48,6 +52,9 @@ public class passwordChangeFragment extends Fragment implements View.OnClickList
         return v;
     }
 
+    /*
+    Check that the password is correct form
+     */
     boolean checkPassword(){
 
         if(password1.getText().toString().equals(password2.getText().toString())){
@@ -80,7 +87,9 @@ public class passwordChangeFragment extends Fragment implements View.OnClickList
             }
         });
     }
-
+    /*
+    Check for success
+     */
     void isSuccess(boolean issuccess, String message){
         if(issuccess){
             Toast.makeText(getContext(), "Salasana vaihdettu!", Toast.LENGTH_LONG).show();

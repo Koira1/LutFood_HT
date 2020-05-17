@@ -4,6 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
+/*
+Single review
+ */
 
 public class Review implements Parcelable {
     public String feedback;

@@ -43,7 +43,7 @@
         android:layout_height="50dp"
         android:id="@+id/settings_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="350dp"
         android:text="Kirjaudu sisään"/>
 
     <Button
@@ -51,7 +51,7 @@
         android:layout_height="50dp"
         android:id="@+id/settings_register"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="400dp"
         android:text="Rekisteröidy"/>
 
     <Button
@@ -59,7 +59,7 @@
         android:layout_height="50dp"
         android:id="@+id/settings_logout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="400dp"
         android:text="Kirjaudu ulos"/>
 
 
